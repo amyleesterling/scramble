@@ -1,6 +1,5 @@
-import scrambleLib from './node_modules/scramble_type/index.js';
-
-const scramble = new scrambleLib();
+// Get the scramble object from the global scope (loaded via CDN)
+const scramble = new Scramble();
 const quoteEl = document.getElementById('cosmic-quote');
 
 // Function to handle window resize

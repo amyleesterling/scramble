@@ -1,4 +1,4 @@
-import scrambleLib from 'scramble_type';
+import scrambleLib from './node_modules/scramble_type/index.js';
 
 const scramble = new scrambleLib();
 const quoteEl = document.getElementById('cosmic-quote');

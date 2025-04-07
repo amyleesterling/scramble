@@ -16,15 +16,20 @@ window.addEventListener('resize', handleResize);
 
 scramble.animateText(quoteEl, {
   step: {
-    duration: 4000, // nice slow cosmic scramble
+    duration: 3000, // slightly faster cosmic scramble
+    characters: '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()',
+    randomize: true,
   },
   reveal: {
     direction: 'forward',
-    pauseTime: 200,
+    pauseTime: 100,
+    revealSpeed: 50,
   },
   onComplete: () => {
     // Ensure proper wrapping after animation completes
     handleResize();
+    // Add a subtle glow effect after animation
+    quoteEl.style.textShadow = '0 0 10px #00ffe0, 0 0 20px #00ffe0';
   }
 });
 
